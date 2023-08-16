@@ -1,0 +1,29 @@
+{
+  "name": "codingsans-backend-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.14.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.8",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "dev": "nodemon --watch './' --exec 'ts-node ./server.ts' -e ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkmuniz/CodingSans-Backend-Challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkmuniz/CodingSans-Backend-Challenge/issues"
+  },
+  "homepage": "https://github.com/mkmuniz/CodingSans-Backend-Challenge#readme"
+}
