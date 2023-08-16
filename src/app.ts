@@ -1,5 +1,7 @@
 import Koa from 'koa';
 import user from './routes/auth.routes';
+require('dotenv').config();
+
 const bodyParser = require('koa-body-parser');
 
 const logger = require('koa-logger')
