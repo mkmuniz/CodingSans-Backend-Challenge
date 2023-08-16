@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "koa": "^2.14.2"
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.0"
   },
   "devDependencies": {
     "@types/koa": "^2.13.8",
@@ -13,7 +14,7 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "dev": "nodemon --watch './' --exec 'ts-node ./server.ts' -e ts",
+    "dev": "nodemon --watch './src' --exec 'ts-node ./src/server.ts' -e ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
