@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import user from './routes/auth.routes';
 import breweries from './routes/breweries.routes';
+import { DataSource } from 'typeorm';
 
 require('dotenv').config();
 

@@ -8,7 +8,7 @@ export async function login(ctx: any) {
     const tokenRequest = ctx.get('Authorization');
 
     if (tokenRequest) {
-        const result: any = jwt.verify(tokenRequest, jwtSecretKey, (err: any, decoded: any) => {
+        const result: any = jwt.verify(tokenRequest, jwtSecretKey, (err: any) => {
             if (err) {
                 return false;
             } else {
@@ -16,7 +16,7 @@ export async function login(ctx: any) {
             }
         });
 
-        if (result) return ctx.body = { Status: 'U re authenticated already' };
+        if (result) return ctx.body = { Status: 'You are authenticated already' };
     };
 
     if (username && password) {
