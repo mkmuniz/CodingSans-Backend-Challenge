@@ -1,12 +1,10 @@
 import Koa from 'koa';
-import user from './routes/auth.routes';
+import user from './routes/user.routes';
 import breweries from './routes/breweries.routes';
-import { DataSource } from 'typeorm';
 
 require('dotenv').config();
 
 const bodyParser = require('koa-body-parser');
-
 const logger = require('koa-logger')
 const app = new Koa();
 

@@ -15,7 +15,7 @@
   },
   "include": [
     "src/**/*"
-  ],
+, "1692456826122-UserMigration.ts"  ],
   "exclude": [
     "node_modules"
   ]
