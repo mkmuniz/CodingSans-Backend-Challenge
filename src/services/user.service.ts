@@ -1,7 +1,6 @@
 import { User } from "../entity/User";
-import { AppDataSource } from "../data-source";
+import { AppDataSource } from "../ormconfig";
 import { hash } from "bcrypt";
-import user from "../routes/user.routes";
 export class UserService {
     static async findUser(user: any) {
         try {
@@ -10,6 +9,7 @@ export class UserService {
             return userInfo;
         } catch (err) {
             console.log(err);
+            return err;
         };
     };
 
@@ -26,6 +26,7 @@ export class UserService {
             return { status: 200, data: userData };
         } catch (err) {
             console.log(err);
+            return err;
         };
     };
 };

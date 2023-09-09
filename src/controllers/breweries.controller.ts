@@ -1,8 +1,6 @@
 import { BreweriesService } from '../services/breweries.service';
 import { verifyToken } from '../utils/jwt';
-
-const jwtSecretKey: any = process.env.JWT_SECRET;
-
+import { jwtSecretKey } from '../app';
 export async function getBreweriesByCity(ctx: any) {
     try {
         const tokenRequest = ctx.get('Authorization');
@@ -38,6 +36,12 @@ export async function getARandomBrewerie(ctx: any) {
             const data = await BreweriesService.getARandomBrewerie();
 
             return ctx.body = { status: 200, data };
+        } else {
+            ctx.set({
+                statusCode: 401,
+            });
+            
+            return ctx.body = { status: 401, data: "Token Invalid" };
         };
     } catch (err) {
         console.log(err);

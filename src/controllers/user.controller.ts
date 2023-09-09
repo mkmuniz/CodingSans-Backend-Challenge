@@ -2,8 +2,7 @@ import { compareSync } from "bcrypt";
 import { authenticateUser } from "../auth/authenticate";
 import { UserService } from "../services/user.service";
 import { verifyToken } from "../utils/jwt";
-
-const jwtSecretKey: any = process.env.JWT_SECRET;
+import { jwtSecretKey } from "../app";
 
 export async function signUpUser(ctx: any) {
     try {
